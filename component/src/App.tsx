@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+function Circle() {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuItems = [1, 2, 3, 4, 5]; // 메뉴 아이템을 나타내는 데이터 배열
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className={`menu ${isOpen ? "open" : ""}`}>
+      {menuItems.map((item) => (
+        <div className="menuItem" key={item}>
+          {item}
+        </div>
+      ))}
+      <button className="toggleButton" onClick={toggleMenu}>
+        {isOpen ? "Close" : "Open"}
+      </button>
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Circle />
     </div>
   );
 }
