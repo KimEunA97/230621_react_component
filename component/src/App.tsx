@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import PieMenu from "./component/PieMenu";
 
 function Circle() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +26,8 @@ function Circle() {
 
 function App() {
   return (
-    <div className="App">
-      <Circle />
+    <div>
+      <PieMenu></PieMenu>
     </div>
   );
 }
