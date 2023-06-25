@@ -12,7 +12,7 @@ function FloorsVerticalMenu() {
   //층수 추가
   const floors = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
   //층 생성
-  const floorsList = floors.map((floorsNumber) => (<CreateVerticalFloors floors={floorsNumber} />))
+  const floorsList = floors.map((floorsNumber) => (<CreateVerticalFloors floors={floorsNumber}/>))
 
   return (
     <div style={styles.btnStyle}>
@@ -51,6 +51,7 @@ const styles = {
   },
 
   btnStyle: {
-    display: "inline-flex", FlexDirection: "column"
+    display: "inline-flex", 
+    flexDirection: "column"
   }
 }
