@@ -31,7 +31,7 @@ function FloorsVerticalMenu() {
       {/* UP버튼 */}
       <button style={styles.upFloorBtn} onClick={handleFloorUp}></button>
       {/* 각 층수 들어간 컴포넌트 */}
-      <p style={styles.middleContainer}>{floorsList}</p>
+      <p style={styles.floorContainer}>{floorsList}</p>
       {/* DOWN 버튼 */}
       <button style={styles.downFloorBtn} onClick={handleFloorDown}></button>
     </div>
@@ -73,7 +73,7 @@ const styles = {
 
   },
 
-  middleContainer: {
+  floorContainer: {
     display: "inline-block",
     backgroundColor: "white",
     padding: "10px",
