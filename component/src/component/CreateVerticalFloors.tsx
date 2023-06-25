@@ -22,9 +22,9 @@ const styles = {
     display: "flex",
     justifyContent : "center",
   },
-  
+
   fontStyle: {
-    color: "white",
+    color: "black",
 
   }
 
