@@ -1,12 +1,18 @@
 import React from 'react';
 import RadialMenu from './component/TogleBtn';
+import VerticalMenu from './component/VerticalMenu';
 
 const App = () => {
+
+
+  const names = ["1", "2", "3", "4", "5","6"]
+  const nameList = names.map((name) => (<VerticalMenu floors={name} />))
+
   return (
     <div className="app">
-      {/* 다른 컴포넌트들 */}
-      <RadialMenu />
-      {/* 다른 컴포넌트들 */}
+
+      <p>{nameList}</p>
+
     </div>
   );
 };
