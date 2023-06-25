@@ -1,0 +1,71 @@
+.radial-menu {
+  position: relative;
+  display: inline-block;
+
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open {
+  width: 80px;
+  height: 80px;
+}
+
+.menu-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-item {
+  background-color: #f1f1f1;
+  color: #333;
+  border: solid black 1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.item-top {
+  transform: translateY(-90px);
+  
+}
+
+.item-right {
+  transform: translateX(90px);
+
+}
+
+.item-bottom {
+  transform: translateY(90px);
+
+}
+
+.item-left {
+  transform: translateX(-90px);
+}

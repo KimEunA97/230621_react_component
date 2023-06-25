@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/Togle.css'
 
 const RadialMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,15 +10,15 @@ const RadialMenu = () => {
 
   return (
     <div className="radial-menu">
-      <button className="menu-toggle" onClick={toggleMenu}>
+      <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         Menu
       </button>
       {isOpen && (
         <div className="menu-items">
-          <button className="menu-item">Item 1</button>
-          <button className="menu-item">Item 2</button>
-          <button className="menu-item">Item 3</button>
-          <button className="menu-item">Item 4</button>
+          <div className="menu-item item-top">Item 1</div>
+          <div className="menu-item item-right">Item 2</div>
+          <div className="menu-item item-bottom">Item 3</div>
+          <div className="menu-item item-left">Item 4</div>
         </div>
       )}
     </div>
