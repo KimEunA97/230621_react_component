@@ -32,7 +32,6 @@ const styles = {
     color: "white",
     padding: "10px",
     margin: 0,
-    borderWidth: "1px",
-    borderStyle: "solid",
+
   },
 };
