@@ -16,7 +16,7 @@ function FloorsVerticalMenu() {
     setSelectedFloor(index);
   };
 
-  const floors = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  const floors = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
   const floorsList = floors.map((floor, index) => (
     <CreateVerticalFloors
       key={index}
@@ -76,13 +76,11 @@ const styles = {
   floorContainer: {
     display: "inline-block",
     backgroundColor: "white",
-    padding: "10px",
+    padding: 0,
     margin: 0,
 
     borderWidth: "1px",
     borderStyle: 'solid',
 
   },
-
-
 }
