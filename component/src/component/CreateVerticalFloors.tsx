@@ -18,6 +18,7 @@ export default CreateVerticalFloors;
 
 const styles = {
 
+  //층수 박스
   container: {
     display: "flex",
     justifyContent : "center",
