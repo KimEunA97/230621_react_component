@@ -1,33 +1,43 @@
 import React, { useState } from "react";
 import CreateVerticalFloors from "./CreateVerticalFloors";
 
-function FloorsVerticalMenu() {
-
+function FloorsVerticalMenu(): any {
+  const [selectedFloor, setSelectedFloor] = useState(null);
 
   function handleFloorUp() {
-
+    // 층을 올리는 동작 구현
   }
+
   function handleFloorDown() {
-
+    // 층을 내리는 동작 구현
   }
 
+  function handleFloorSelect(floor : any ) {
+    setSelectedFloor(floor);
+  }
 
-  //층수 추가
-  const floors = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
-  //층 생성
-  const floorsList = floors.map((floorsNumber) => (<CreateVerticalFloors floors={floorsNumber} />))
+  const floors = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  const floorsList = floors.map((floor) => (
+    <CreateVerticalFloors
+      key={floor}
+      floors={floor}
+      selectedFloor={selectedFloor}
+      onSelect={handleFloorSelect}
+    />
+  ));
 
   return (
     <div style={styles.container}>
       <div style={styles.upFloorBtn} onClick={handleFloorUp}></div>
       <p style={styles.defaultFloor}>{floorsList}</p>
-      <div style={styles.downFloorBtn} onClick={handleFloorDown} ></div>
+      <div style={styles.downFloorBtn} onClick={handleFloorDown}></div>
     </div>
-  )
-
+  );
 }
 
 export default FloorsVerticalMenu;
+
+
 
 const styles = {
 

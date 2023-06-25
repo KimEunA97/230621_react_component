@@ -1,20 +1,29 @@
 import React from "react";
 
+function CreateVerticalFloors({ floors, selectedFloor, onSelect }:any)  {
+  const handleClick = () => {
+    onSelect(floors);
+  };
 
-
-
-function CreateVerticalFloors({ floors }: { floors: any }) {
+  const isSelected = selectedFloor === floors;
 
   return (
-
-    <div style={styles.container}>
+    <div
+      style={{
+        ...styles.container,
+        backgroundColor: isSelected ? "#2A72EF" : "white",
+      }}
+      onClick={handleClick}
+    >
       <p style={styles.fontStyle}>{floors}</p>
     </div>
-
-  )
+  );
 }
 
 export default CreateVerticalFloors;
+
+// styles 객체는 동일하게 유지됩니다.
+
 
 const styles = {
 
