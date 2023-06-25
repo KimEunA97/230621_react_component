@@ -9,7 +9,8 @@ const RadialMenu = () => {
   };
 
   return (
-    <div className="radial-menu">
+    <div>
+    <button className="radial-menu">
       <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         Menu
       </button>
@@ -21,6 +22,7 @@ const RadialMenu = () => {
           <div className="menu-item item-left">Item 4</div>
         </div>
       )}
+    </button>
     </div>
   );
 };

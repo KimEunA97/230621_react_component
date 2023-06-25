@@ -1,6 +1,7 @@
 .radial-menu {
-  position: relative;
-  display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
 
 }
 
