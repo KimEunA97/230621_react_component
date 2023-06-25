@@ -50,28 +50,28 @@
 .item-top {
   transform: translate(0px, -20px);
   background-image: url('../img/Toilet.png');
-  background-size: cover;
+  background-size: contain;background-repeat: no-repeat;
   background-position: center;
 }
 
 .item-right {
   transform: translate(90px, 25px);
   background-image: url('../img/Sohwagi.png');
-  background-size: cover;
+  background-size: contain;background-repeat: no-repeat;
   background-position: center;
 }
 
 .item-bottom {
   transform: translate(0px, 70px);
   background-image: url('../img/Escape.png');
-  background-size: cover;
+  background-size: contain;background-repeat: no-repeat;
   background-position: center;
 }
 
 .item-left {
   transform: translate(-90px, -75px);
   background-image: url('../img/Wanganggi.png');
-  background-size: cover;
+  background-size: contain;background-repeat: no-repeat;
   background-position: center;
 }
 
