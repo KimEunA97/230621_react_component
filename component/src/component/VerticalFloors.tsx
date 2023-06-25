@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-function VerticalMenu({ floors }: { floors: any }) {
+function VerticalFloors({ floors }: { floors: any }) {
 
   return (
 
@@ -14,4 +14,4 @@ function VerticalMenu({ floors }: { floors: any }) {
   )
 }
 
-export default VerticalMenu;
+export default VerticalFloors;

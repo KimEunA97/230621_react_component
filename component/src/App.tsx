@@ -1,12 +1,12 @@
 import React from 'react';
 import RadialMenu from './component/TogleBtn';
-import VerticalMenu from './component/VerticalMenu';
+import VerticalFloors from './component/VerticalFloors';
 
 const App = () => {
 
 
   const names = ["1", "2", "3", "4", "5","6"]
-  const nameList = names.map((name) => (<VerticalMenu floors={name} />))
+  const nameList = names.map((name) => (<VerticalFloors floors={name} />))
 
   return (
     <div className="app">
