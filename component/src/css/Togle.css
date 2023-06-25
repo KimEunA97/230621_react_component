@@ -2,14 +2,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 200px;
-
+  width: 170px;
+  height: 170px;
   position: absolute;
   top: 400px;
   left: 400px;
   border-radius: 50%;
-  background-color: ${isOpen ? 'transparent' : '#f0f0f0'};
+
+}
+
+.container.open {
+  background-color: #D1D1D1;
+  background-image: url('../img/Xwhite.png');
+  background-size: contain;
+  background-position: center;
+
 }
 
 .radial-menu {
@@ -59,7 +66,7 @@
 }
 
 .item-top {
-  transform: translate(0px, -20px);
+  transform: translate(0px, 15px);
   background-image: url('../img/Toilet.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -67,7 +74,7 @@
 }
 
 .item-right {
-  transform: translate(90px, 25px);
+  transform: translate(60px, 25px);
   background-image: url('../img/Sohwagi.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -75,7 +82,7 @@
 }
 
 .item-bottom {
-  transform: translate(0px, 70px);
+  transform: translate(0px, 30px);
   background-image: url('../img/Escape.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -83,7 +90,7 @@
 }
 
 .item-left {
-  transform: translate(-90px, -75px);
+  transform: translate(-60px, -75px);
   background-image: url('../img/Wanganggi.png');
   background-size: contain;
   background-repeat: no-repeat;

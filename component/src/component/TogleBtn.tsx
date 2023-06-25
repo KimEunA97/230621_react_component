@@ -9,7 +9,7 @@ const RadialMenu = () => {
   };
 
   return (
-    <div className={isOpen ? 'container open' : 'container'}>
+    <div className={`container ${isOpen ? 'open' : ''}`}>
       <button className="radial-menu">
         <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
 
