@@ -25,8 +25,7 @@ const styles = {
     backgroundColor: "white",
     padding: "10px",
     margin: 0,
-    borderWidth: "1px",
-    borderStyle: "solid",
+
   },
   onClickFloor: {
     backgroundColor: "#2A72EF",
