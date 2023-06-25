@@ -2,6 +2,8 @@
   position: relative;
   width: 40px;
   height: 40px;
+  top: 50%;
+  left: 50%;
 }
 
 .menu-toggle {
@@ -73,7 +75,3 @@
   background-position: center;
 }
 
-.open {
-  transform: translate(-50%, -50%) scale(1.2);
-  /* 버튼이 눌렸을 때 확대되도록 설정 */
-}
