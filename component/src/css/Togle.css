@@ -1,7 +1,8 @@
 .radial-menu {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
 
 }
 
@@ -22,11 +23,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.open {
-  width: 80px;
-  height: 80px;
 }
 
 .menu-items {
@@ -53,20 +49,32 @@
 }
 
 .item-top {
-  transform: translateY(-90px);
-  
+  transform: translate(0px, -30px);
+  background-image: url('../img/Toilet.png');
+  background-size : cover;
+  background-position : center;
 }
 
 .item-right {
-  transform: translateX(90px);
+  transform: translate(90px, 20px);
+  background-image: url('../img/Sohwagi.png');
+  background-size : cover;
+  background-position : center;
 
 }
 
 .item-bottom {
-  transform: translateY(90px);
+  transform: translate(0px, 70px);
+  background-image: url('../img/Escape.png');
+  background-size : cover;
+  background-position : center;
 
 }
 
 .item-left {
-  transform: translateX(-90px);
+  transform: translate(-90px, -80px);
+  background-image: url('../img/Wanganggi.png');
+  background-size : cover;
+  background-position : center;
+
 }

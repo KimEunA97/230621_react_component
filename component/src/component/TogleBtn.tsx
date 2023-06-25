@@ -10,19 +10,23 @@ const RadialMenu = () => {
 
   return (
     <div>
-    <button className="radial-menu">
-      <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        Menu
+      <button className="radial-menu">
+        <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+
+        </button>
+        {isOpen && (
+
+          <div className="menu-items">
+            <img src="../img/X.png" />
+
+            <div className="menu-item item-top">
+            </div>
+            <div className="menu-item item-right"></div>
+            <div className="menu-item item-bottom"></div>
+            <div className="menu-item item-left"></div>
+          </div>
+        )}
       </button>
-      {isOpen && (
-        <div className="menu-items">
-          <div className="menu-item item-top">Item 1</div>
-          <div className="menu-item item-right">Item 2</div>
-          <div className="menu-item item-bottom">Item 3</div>
-          <div className="menu-item item-left">Item 4</div>
-        </div>
-      )}
-    </button>
     </div>
   );
 };
