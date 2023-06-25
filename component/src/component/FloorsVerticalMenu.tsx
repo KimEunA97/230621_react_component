@@ -5,14 +5,28 @@ function FloorsVerticalMenu(): any {
   const [selectedFloor, setSelectedFloor] = useState(null);
 
   function handleFloorUp() {
-    // 층을 올리는 동작 구현
+    setSelectedFloor((prevFloor:any) => {
+      const currentFloorIndex = floors.indexOf(prevFloor);
+      if (currentFloorIndex > 0) {
+        return floors[currentFloorIndex - 1];
+      } else {
+        return prevFloor;
+      }
+    });
   }
 
   function handleFloorDown() {
-    // 층을 내리는 동작 구현
+    setSelectedFloor((prevFloor:any) => {
+      const currentFloorIndex = floors.indexOf(prevFloor);
+      if (currentFloorIndex < floors.length - 1) {
+        return floors[currentFloorIndex + 1];
+      } else {
+        return prevFloor;
+      }
+    });
   }
 
-  function handleFloorSelect(floor : any ) {
+  function handleFloorSelect(floor:any) {
     setSelectedFloor(floor);
   }
 
