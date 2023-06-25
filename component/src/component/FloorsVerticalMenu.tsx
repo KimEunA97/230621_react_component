@@ -28,8 +28,11 @@ function FloorsVerticalMenu() {
 
   return (
     <div style={styles.container}>
+      {/* UP버튼 */}
       <button style={styles.upFloorBtn} onClick={handleFloorUp}></button>
-      <p style={styles.defaultFloor}>{floorsList}</p>
+      {/* 각 층수 들어간 컴포넌트 */}
+      <p style={styles.middleContainer}>{floorsList}</p>
+      {/* DOWN 버튼 */}
       <button style={styles.downFloorBtn} onClick={handleFloorDown}></button>
     </div>
   );
@@ -70,7 +73,7 @@ const styles = {
 
   },
 
-  defaultFloor: {
+  middleContainer: {
     display: "inline-block",
     backgroundColor: "white",
     padding: "10px",
