@@ -1,41 +1,39 @@
 import React from "react";
 
-function CreateVerticalFloors({ floors, selectedFloor, onSelect }:any)  {
-  const handleClick = () => {
-    onSelect(floors);
-  };
-
-  const isSelected = selectedFloor === floors;
+function CreateVerticalFloors({ floors, isSelected, onClick } : any) {
+  const floorStyle = isSelected ? styles.onClickFloor : styles.defaultFloor;
 
   return (
-    <div
-      style={{
-        ...styles.container,
-        backgroundColor: isSelected ? "#2A72EF" : "white",
-      }}
-      onClick={handleClick}
-    >
-      <p style={styles.fontStyle}>{floors}</p>
+    <div style={styles.container} onClick={onClick}>
+      <p style={{ ...styles.fontStyle, ...floorStyle }}>{floors}</p>
     </div>
   );
 }
 
 export default CreateVerticalFloors;
 
-// styles 객체는 동일하게 유지됩니다.
-
-
 const styles = {
-
-  //층수 박스
   container: {
     display: "flex",
-    justifyContent : "center",
+    justifyContent: "center",
+    cursor: "pointer",
   },
-
   fontStyle: {
     color: "black",
-
-  }
-
-}
+  },
+  defaultFloor: {
+    backgroundColor: "white",
+    padding: "10px",
+    margin: 0,
+    borderWidth: "1px",
+    borderStyle: "solid",
+  },
+  onClickFloor: {
+    backgroundColor: "#2A72EF",
+    color: "white",
+    padding: "10px",
+    margin: 0,
+    borderWidth: "1px",
+    borderStyle: "solid",
+  },
+};

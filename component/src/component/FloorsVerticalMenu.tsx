@@ -1,57 +1,41 @@
 import React, { useState } from "react";
 import CreateVerticalFloors from "./CreateVerticalFloors";
 
-function FloorsVerticalMenu(): any {
-  const [selectedFloor, setSelectedFloor] = useState(null);
+function FloorsVerticalMenu() {
+  const [selectedFloor, setSelectedFloor] = useState(0);
 
   function handleFloorUp() {
-    setSelectedFloor((prevFloor:any) => {
-      const currentFloorIndex = floors.indexOf(prevFloor);
-      if (currentFloorIndex > 0) {
-        return floors[currentFloorIndex - 1];
-      } else {
-        return prevFloor;
-      }
-    });
+    setSelectedFloor(prevFloor => (prevFloor > 0 ? prevFloor - 1 : prevFloor));
   }
 
   function handleFloorDown() {
-    setSelectedFloor((prevFloor:any) => {
-      const currentFloorIndex = floors.indexOf(prevFloor);
-      if (currentFloorIndex < floors.length - 1) {
-        return floors[currentFloorIndex + 1];
-      } else {
-        return prevFloor;
-      }
-    });
+    setSelectedFloor(prevFloor => (prevFloor < floors.length - 1 ? prevFloor + 1 : prevFloor));
   }
 
-  function handleFloorSelect(floor:any) {
-    setSelectedFloor(floor);
-  }
+  const handleFloorClick = (index: number) => {
+    setSelectedFloor(index);
+  };
 
   const floors = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-  const floorsList = floors.map((floor) => (
+  const floorsList = floors.map((floor, index) => (
     <CreateVerticalFloors
-      key={floor}
+      key={index}
       floors={floor}
-      selectedFloor={selectedFloor}
-      onSelect={handleFloorSelect}
+      isSelected={index === selectedFloor}
+      onClick={() => handleFloorClick(index)}
     />
   ));
 
   return (
     <div style={styles.container}>
-      <div style={styles.upFloorBtn} onClick={handleFloorUp}></div>
+      <button style={styles.upFloorBtn} onClick={handleFloorUp}></button>
       <p style={styles.defaultFloor}>{floorsList}</p>
-      <div style={styles.downFloorBtn} onClick={handleFloorDown}></div>
+      <button style={styles.downFloorBtn} onClick={handleFloorDown}></button>
     </div>
   );
 }
 
 export default FloorsVerticalMenu;
-
-
 
 const styles = {
 
@@ -61,25 +45,29 @@ const styles = {
     margin: 0,
   },
   upFloorBtn: {
+    cursor: "pointer",
     padding: "10px",
+    backgroundColor: "white",
 
     borderWidth: "1px",
     borderStyle: 'solid',
     borderRadius: "5px",
 
-    borderBottomLeftRadius: "1px", // 수정된 부분
-    borderBottomRightRadius: "1px", // 수정된 부분
+    borderBottomLeftRadius: "1px",
+    borderBottomRightRadius: "1px",
   },
-
   downFloorBtn: {
+    cursor: "pointer",
     padding: "10px",
+    backgroundColor: "white",
 
     borderWidth: "1px",
     borderStyle: 'solid',
     borderRadius: "5px",
 
-    borderTopLeftRadius: "1px", // 수정된 부분
-    borderTopRightRadius: "1px", // 수정된 부분
+    borderTopLeftRadius: "1px",
+    borderTopRightRadius: "1px",
+
   },
 
   defaultFloor: {
@@ -91,15 +79,6 @@ const styles = {
     borderWidth: "1px",
     borderStyle: 'solid',
 
-  },
-  onClickFloor: {
-    display: "inline-block",
-    backgroundColor: "#2A72EF",
-    padding: "10px",
-    margin: 0,
-
-    borderWidth: "1px",
-    borderStyle: 'solid',
   },
 
 
