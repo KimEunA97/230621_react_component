@@ -8,10 +8,18 @@ function CreateVerticalFloors({ floors }: { floors: any }) {
   return (
 
     <div>
-      <p>{floors}</p>
+      <p style={styles.container}>{floors}</p>
     </div>
 
   )
 }
 
 export default CreateVerticalFloors;
+
+const styles = {
+
+  container: {
+    color: "white",
+  }
+
+}
