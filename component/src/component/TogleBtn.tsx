@@ -17,8 +17,6 @@ const RadialMenu = () => {
         {isOpen && (
 
           <div className="menu-items">
-            <img src="../img/X.png" />
-
             <div className="menu-item item-top">
             </div>
             <div className="menu-item item-right"></div>

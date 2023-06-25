@@ -1,12 +1,13 @@
 .radial-menu {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-
-
+  position: relative;
+  width: 40px;
+  height: 40px;
 }
 
 .menu-toggle {
+  background-image: url('../img/TogleBtn.png');
+  background-size: cover;
+  background-position: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,58 +24,53 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1; /* 버튼을 항상 위에 표시 */
 }
 
 .menu-items {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  pointer-events: none; /* 메뉴 아이템의 마우스 이벤트를 무시 */
+  z-index: 2; /* 메뉴 아이템을 버튼 위로 올리기 */
 }
 
 .menu-item {
-  background-color: #f1f1f1;
-  color: #333;
-  border: solid black 1;
-  border-radius: 50%;
   width: 40px;
   height: 40px;
-  font-size: 16px;
   cursor: pointer;
   outline: none;
 }
 
 .item-top {
-  transform: translate(0px, -30px);
+  transform: translate(0px, -20px);
   background-image: url('../img/Toilet.png');
-  background-size : cover;
-  background-position : center;
+  background-size: cover;
+  background-position: center;
 }
 
 .item-right {
-  transform: translate(90px, 20px);
+  transform: translate(90px, 25px);
   background-image: url('../img/Sohwagi.png');
-  background-size : cover;
-  background-position : center;
-
+  background-size: cover;
+  background-position: center;
 }
 
 .item-bottom {
   transform: translate(0px, 70px);
   background-image: url('../img/Escape.png');
-  background-size : cover;
-  background-position : center;
-
+  background-size: cover;
+  background-position: center;
 }
 
 .item-left {
-  transform: translate(-90px, -80px);
+  transform: translate(-90px, -75px);
   background-image: url('../img/Wanganggi.png');
-  background-size : cover;
-  background-position : center;
-
+  background-size: cover;
+  background-position: center;
 }
