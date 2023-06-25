@@ -24,20 +24,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1; /* 버튼을 항상 위에 표시 */
+  z-index: 1;
 }
 
 .menu-items {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  pointer-events: none; /* 메뉴 아이템의 마우스 이벤트를 무시 */
-  z-index: 2; /* 메뉴 아이템을 버튼 위로 올리기 */
 }
 
 .menu-item {
@@ -73,4 +71,9 @@
   background-image: url('../img/Wanganggi.png');
   background-size: cover;
   background-position: center;
+}
+
+.open {
+  transform: translate(-50%, -50%) scale(1.2);
+  /* 버튼이 눌렸을 때 확대되도록 설정 */
 }
